@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="public/styles.css" />
+    <script src="https://kit.fontawesome.com/861f3450a4.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script>
+    var welcome;
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    if (minute < 10) {
+      minute = "0" + minute;
+    }
+    if (second < 10) {
+      second = "0" + second;
+    }
+    if (hour < 12) {
+      welcome = "Good Morning";
+    } else if (hour < 17) {
+      welcome = "Good Afternoon";
+    } else {
+      welcome = "Good Evening";
+    }
+    document.write("<h3>" + "<font color='red'>" + welcome + "</font>" + " Welcome To Our Website!!!!");
+    document.write("<br />")
+    </script>
+    <div class="container">
+	<div class="header">
+		<h2>Create Account</h2>
+	</div>
+	<form id="form" class="form" onsubmit="success.html">
+		<div class="form-control">
+			<label for="username">Username</label>
+			<input type="text" placeholder="Enter Username" id="username" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Email</label>
+			<input type="email" placeholder="Enter Email Address" id="email" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password</label>
+			<input type="password" placeholder="Enter Password" id="password"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<label for="username">Password check</label>
+			<input type="password" placeholder="Confirm Password" id="password2"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+	  <button type="submit">Submit</button>
+	</form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
